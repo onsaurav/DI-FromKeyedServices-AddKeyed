@@ -1,0 +1,20 @@
+﻿@page
+@model DI.Web.Pages.BookModel
+
+<h2>Book List</h2>
+<hr/>
+
+@if (Model._bookList != null && Model._bookList.Count > 0)
+{
+    <ul>
+        @foreach (var book in Model._bookList)
+        {
+            <li>Id: @book.Id, Name: @book.Name</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No books available.</p>
+}
+

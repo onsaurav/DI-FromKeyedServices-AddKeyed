@@ -1,0 +1,22 @@
+﻿@page
+@model DI.Web.Pages.MovieModel
+
+
+<h2>Movie List</h2>
+<hr />
+
+@if (Model._movieList != null && Model._movieList.Count > 0)
+{
+    <ul>
+        @foreach (var movie in Model._movieList)
+        {
+            <li>Id: @movie.Id, Name: @movie.Name</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No movies available.</p>
+}
+
+
